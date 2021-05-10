@@ -3,7 +3,7 @@ import {Alert} from 'react-native'
 const getArtists = async (page = 1, country = 'spain') => {
     try {
         const API_KEY = '829751643419a7128b7ada50de590067';
-        const url = `http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=${country}&api_key=${API_KEY}&format=json&page=${page}`;
+        const url = `https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=${country}&api_key=${API_KEY}&format=json&page=${page}`;
         const response = await fetch(url);
         const artists = await response.json();
         if(artists.error) {
