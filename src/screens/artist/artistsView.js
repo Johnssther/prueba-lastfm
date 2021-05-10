@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Button, FlatList } from 'react-native';
+import { Text, View, Button, FlatList, SafeAreaView } from 'react-native';
 import ItemList from '../../components/itemList/itemList';
 import styles from './styles'
 
@@ -32,9 +32,11 @@ const ArtistView = (props) => {
                     />
                 </View>
             </View>
+            
             <FlatList
                 data={artists.topartists.artist}
                 renderItem={(item)=><ItemList item={item} />}
+                keyExtractor={index => index.mbid}
             />
         </View>
     );

@@ -12,6 +12,7 @@ import {
   ScrollView,
   StatusBar,
   Text,
+  View,
 } from 'react-native';
 
 import Artist from './src/screens/artist/artists' 
@@ -27,12 +28,10 @@ const App = () => {
     <Provider store={store}>
       <PersistGate loading={<Loading />} persistor={persistor}>
 
-        <SafeAreaView style={{backgroundColor:'#fff'}}>
-          <StatusBar/>
-          <Header />
-          <ScrollView>  
+        <SafeAreaView style={{backgroundColor:'#fff', flex:1}}>
+            <StatusBar/>
+            <Header />
             <Artist />
-          </ScrollView>
         </SafeAreaView>
 
       </PersistGate>

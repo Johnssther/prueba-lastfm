@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, Linking, Image} from 'react-native'
 import styles from './itemList.styles';
 
 const ItemList = (props) => {
